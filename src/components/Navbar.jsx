@@ -1,11 +1,11 @@
-import logo from '../assets/logo.png'
+import logo from '../assets/logo2.png'
 import CartWidget from './CartWidget'
 
 function Navbar () {
     return (
         <div className="nav-container">
 
-            <img src={logo} alt="" />
+            <img src={logo} alt="logo de Charm Home" />
 
             <nav className="navbar">
                 <ul className='categorias'>

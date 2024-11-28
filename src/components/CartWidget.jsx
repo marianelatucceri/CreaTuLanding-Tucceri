@@ -1,8 +1,7 @@
 
 function CartWidget () {
     return (
-        <h2 className="carrito">🛒1</h2>
-
+        <h3 className="carrito">🛒1</h3>
     )
 }
 export default CartWidget

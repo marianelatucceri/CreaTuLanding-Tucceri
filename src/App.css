@@ -1,19 +1,35 @@
+
 .nav-container{
   display: flex;
-  margin: 5px;
-  justify-content: center;
+  justify-content: space-between;
   list-style-type: none;
+  background-color: rgb(252, 247, 247);
 }
+
 .nav-container img{
-  width: 230px;
+  width: 290px;
 }
+
 .categorias{
   display: flex;
 }
+
 .categorias li{
   display: flex;
 }
+
 .categorias li a{
-  margin: 50px 50px;
+  margin: 70px;
   color: rgba(98, 41, 41, 0.596); 
+  font-size: 17px;
+}
+
+.carrito{
+  margin-top: 80px;
+  margin-right: 40px;
+}
+
+.list-container{
+  font-size: 30px;
+  text-align: center;
 }
