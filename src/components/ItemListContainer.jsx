@@ -7,7 +7,7 @@ function ItemListContainer() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
+    fetch('https://fakestoreapi.com/products')
       .then((res) => res.json())
       .then((res) => setItems(res))
       .catch(err => console.log(err))

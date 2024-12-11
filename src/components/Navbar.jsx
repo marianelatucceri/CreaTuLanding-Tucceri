@@ -1,4 +1,4 @@
-import logo from '../assets/logo2.png'
+import logo from '../assets/logonuevo1.png'
 import CartWidget from './CartWidget'
 
 function Navbar () {
@@ -9,9 +9,9 @@ function Navbar () {
 
             <nav className="navbar">
                 <ul className='categorias'>
-                    <li><a href="">Decoración</a></li>
-                    <li><a href="">Muebles</a></li>
-                    <li><a href="">Textiles</a></li>
+                    <li><a href="">Indumentaria</a></li>
+                    <li><a href="">Joyas</a></li>
+                    <li><a href="">Electrónica</a></li>
                 </ul>
             </nav>
 
