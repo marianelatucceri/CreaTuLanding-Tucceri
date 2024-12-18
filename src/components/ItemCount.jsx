@@ -1,15 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function ItemCount () {
     const [count, setCount] = useState(0)
-
-    useEffect (() => {
-        console.log('Se ejecuto el efecto')
-
-        return () => {
-            console.log('Se desmonto el componente')
-        }
-    }, [count])
 
     const handleAdd = () => {
         setCount (count + 1)
