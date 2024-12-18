@@ -11,7 +11,6 @@ function Item ({ item }) {
               <Card.Img variant="top" src={item.thumbnail} className="card-img"/>
               <Card.Body className="card-body">
                 <Card.Title className="title">{item.title}</Card.Title>
-                <Card.Text className="text">{item.description}</Card.Text>
                 <Card.Text className="text">{item.category}</Card.Text>
                 <Card.Text className="price">${item.price}</Card.Text>
                 <Button variant="secondary" as= {Link} to={`/item/${item.id}`} className="button">Detalle</Button>
