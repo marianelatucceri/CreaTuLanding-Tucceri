@@ -19,9 +19,9 @@
 }
 
 .categorias li a{
-  margin: 70px;
+  margin: 40px;
   color: rgba(98, 41, 41, 0.596); 
-  font-size: 20px;
+  font-size: 17px;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
 }

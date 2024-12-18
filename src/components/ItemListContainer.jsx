@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react";
+import { useParams } from "react-router";
 import ItemList from "./ItemList";
 
 
-
 function ItemListContainer() {
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState([])
+  const { id } = useParams ()
 
   useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
+    const urlBase = 'https://dummyjson.com/products'
+    const urlByCategory = `https://dummyjson.com/products/category/${id}`
+
+    fetch(id ? urlByCategory : urlBase)
       .then((res) => res.json())
-      .then((res) => setItems(res))
+      .then((res) => setItems(res.products))
       .catch(err => console.log(err))
-  }, []);
+
+  }, [id]);
 
   return (
     <ItemList items={items}/>
