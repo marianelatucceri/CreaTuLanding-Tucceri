@@ -8,7 +8,7 @@ function ItemDetail({ item }) {
       <h2>{item?.title}</h2>
       <p>{item?.description}</p>
       <br />
-      <ItemCount />
+      <ItemCount item={item} />
     </div>
   );
 }

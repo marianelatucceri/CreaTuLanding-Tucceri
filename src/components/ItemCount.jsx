@@ -1,7 +1,11 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
+ 
+import { useState, useContext } from "react"
+import { CartContext } from "../context/CartContext"
 
-function ItemCount() {
-  const [count, setCount] = useState(0);
+function ItemCount({ item }) {
+  const [count, setCount] = useState(0)
+  const {addToCart} = useContext(CartContext)
 
   const handleAdd = () => {
     setCount(count + 1);
@@ -10,6 +14,10 @@ function ItemCount() {
   const handleSubstract = () => {
     setCount(count - 1);
   };
+
+  const handleAddToCart = () => {
+    addToCart({ ...item, quantity: count })
+  }
 
   return (
     <div>
@@ -35,6 +43,18 @@ function ItemCount() {
         onClick={handleSubstract}
       >
         Quitar
+      </button>
+      <br></br>
+      <button
+        style={{
+          backgroundColor: "rgba(243, 214, 214, 0.8)",
+          border: "solid 1px white",
+          borderRadius: "7px",
+          color: "black",
+        }}
+        onClick={handleAddToCart}
+      >
+        Add to cart
       </button>
     </div>
   );
