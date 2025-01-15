@@ -12,15 +12,21 @@ export default function CartProvider ({ children }) {
         if (!isInCart) return setCart([...cart, item])
     }
 
-    const getQty =() => {
+    const getQty = () => {
         const cantidades = cart.map(item => item.quantity)
         const cantidadTotal = cantidades.reduce((acc, current) => acc + current, 0)
         return cantidadTotal
     }
 
+    const getTotal = () => {
+        const totales = cart.map(item => item.quantity*item.price)
+        const total = totales.reduce((acc, current) => acc + current, 0)
+        return total
+    }
+
     return (
-        <CartContext.Provider value={{ cart, addToCart, getQty }}>
-            {children}
+        <CartContext.Provider value={{ cart, addToCart, getQty, getTotal }}>
+            { children }
         </CartContext.Provider>
     )
 }
