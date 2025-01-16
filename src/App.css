@@ -93,10 +93,11 @@
 }
 
 .cart-list{
-  width: 50%;
+  width: 70%;
   padding: 30px;
-  margin-left: 350px;
+  margin-left: 250px;
   margin-top: 80px;
+  margin-bottom: 40px;
   border: 1px solid black;
   border-radius: 5px;
 }
@@ -107,8 +108,19 @@
 }
 
 .ver-productos{
-  margin-left: 195px;
+  margin-left: 105px;
+  margin-right: 40px;
   margin-top: 20px;
+  margin-bottom: 22px;
+  background-color:   rgba(206, 164, 164, 0.678);
+  border: none;
+}
+
+.ver-productos-cart{
+  margin-left: 205px;
+  margin-right: 40px;
+  margin-top: 20px;
+  margin-bottom: 22px;
   background-color:   rgba(206, 164, 164, 0.678);
   border: none;
 }

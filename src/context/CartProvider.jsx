@@ -24,8 +24,15 @@ export default function CartProvider ({ children }) {
         return total
     }
 
+    const vaciarCarrito = () => {
+        setCart([])
+    }
+
+
+    
+
     return (
-        <CartContext.Provider value={{ cart, addToCart, getQty, getTotal }}>
+        <CartContext.Provider value={{ cart, addToCart, getQty, getTotal, vaciarCarrito }}>
             { children }
         </CartContext.Provider>
     )

@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
- 
 import { useState, useContext } from "react"
 import { CartContext } from "../context/CartContext"
 
@@ -54,7 +53,7 @@ function ItemCount({ item }) {
         }}
         onClick={handleAddToCart}
       >
-        Add to cart
+        Agregar al carrito
       </button>
     </div>
   );
