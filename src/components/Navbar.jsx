@@ -11,10 +11,10 @@ function Navbar() {
       <nav className="navbar">
         <ul className="categorias">
           <li>
-            <Link to="/category/beauty">Beauty</Link>
-            <Link to="/category/fragrances">Fragrances</Link>
-            <Link to="/category/furniture">Furniture</Link>
-            <Link to="/category/groceries">Groceries</Link>
+            <Link to="/category/decoracion">Decoración</Link>
+            <Link to="/category/iluminacion">Iluminación</Link>
+            <Link to="/category/muebles">Muebles</Link>
+            <Link to="/category/textiles">Textiles</Link>
           </li>
         </ul>
       </nav>
