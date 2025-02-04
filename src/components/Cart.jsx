@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button"
 import { useCart } from "../context/CartContext"
 import { Link } from "react-router"
 
+
 function Cart () {
     const { cart, getTotal, vaciarCarrito } = useCart()
 
@@ -24,7 +25,7 @@ function Cart () {
             <CartList items={cart} />
             <p className="mt-3 fw-bold">Precio Total: $ {getTotal()}</p>
             <Button variant='dark' className='ver-productos w-50'>Finalizar compra</Button>
-            <Button variant='dark' className='ver-productos w-50' onClick={handleVaciar}>Vaciar carrito</Button>
+            <Button variant='dark' className='ver-productos w-50' onClick={handleVaciar}>Vaciar carrito</Button>    
         </div>
     )
 }
