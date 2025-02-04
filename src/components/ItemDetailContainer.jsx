@@ -1,18 +1,18 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router";
-import ItemDetail from "./ItemDetail";
+import { useState, useEffect } from "react"
+import { useParams } from "react-router"
+import ItemDetail from "./ItemDetail"
 
 function ItemDetailContainer() {
-  const [item, setItem] = useState();
-  const { id } = useParams();
+  const [item, setItem] = useState()
+  const { id } = useParams()
 
   useEffect(() => {
     fetch(`https://dummyjson.com/products/${id}`)
       .then((res) => res.json())
-      .then((res) => setItem(res));
-  }, [id]);
+      .then((res) => setItem(res))
+  }, [id])
 
-  return <ItemDetail item={item} />;
+  return <ItemDetail item={item} />
 }
 
-export default ItemDetailContainer;
+export default ItemDetailContainer
