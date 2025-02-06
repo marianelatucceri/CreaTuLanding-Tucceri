@@ -3,8 +3,12 @@ import Form from "react-bootstrap/Form"
 import { useCart } from "../context/CartContext"
 import { createOrder } from "../firebase/db"
 import { serverTimestamp } from "firebase/firestore"
+import { Link } from "react-router"
+
+
 
 function Checkout() {
+
     const { cart, getTotal } = useCart()
 
     const handleSubmit = (e) => {
@@ -22,10 +26,10 @@ function Checkout() {
 
         createOrder(order)
     }
-    
+
   return (
     <div className="d-flex align-items-center justify-content-center">
-       <Form className="w-25 mt-5" onSubmit={handleSubmit}>
+       <Form className="w-25 mt-5 form" onSubmit={handleSubmit}>
          <h3 className="mb-5">Complete los datos para finalizar la compra:</h3>
 
          <Form.Group className="mb-3" controlId="name">
@@ -43,8 +47,8 @@ function Checkout() {
              <Form.Control type="text" placeholder="+541158659654" required />
          </Form.Group>
 
-         <Button variant="primary" type="submit">
-          Finalizar compra
+         <Button className="ver-productos" as={Link} to="/modalcheckout" variant="dark" type="submit">
+          Comprar
          </Button>
        </Form>
     </div>

@@ -1,21 +1,32 @@
 /* eslint-disable react/prop-types */
 import { useState, useContext } from "react"
 import { CartContext } from "../context/CartContext"
+import { ToastContainer, toast } from 'react-toastify'
 
 function ItemCount({ item }) {
-  const [count, setCount] = useState(0)
+  
+  const [count, setCount] = useState(1)
   const {addToCart} = useContext(CartContext)
 
   const handleAdd = () => {
-    setCount(count + 1);
-  };
+    setCount(count + 1)
+  }
 
   const handleSubstract = () => {
-    setCount(count - 1);
-  };
+    count >1 && setCount(count - 1)
+  }
+
+
+  const handleClick = () => {
+    handleAddToCart()
+    notify()
+  }
 
   const handleAddToCart = () => {
     addToCart({ ...item, quantity: count })
+  }
+  const notify = () => {
+    toast("Producto agregado al carrito!")
   }
 
   return (
@@ -51,12 +62,13 @@ function ItemCount({ item }) {
           borderRadius: "7px",
           color: "black",
         }}
-        onClick={handleAddToCart}
+        onClick={handleClick}
       >
         Agregar al carrito
       </button>
+      <ToastContainer />
     </div>
-  );
+  )
 }
 
-export default ItemCount;
+export default ItemCount

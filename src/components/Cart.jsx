@@ -24,7 +24,7 @@ function Cart () {
         <div className="cart-list d-flex flex-column justify-content-center align-items-start">
             <CartList items={cart} />
             <p className="mt-3 fw-bold">Precio Total: $ {getTotal()}</p>
-            <Button variant='dark' className='ver-productos w-50'>Finalizar compra</Button>
+            <Button as={Link} to="/checkout" variant='dark' className='ver-productos w-50'>Finalizar compra</Button>
             <Button variant='dark' className='ver-productos w-50' onClick={handleVaciar}>Vaciar carrito</Button>    
         </div>
     )

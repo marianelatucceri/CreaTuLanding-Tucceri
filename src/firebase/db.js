@@ -10,6 +10,7 @@ import {
 } from "firebase/firestore"
 import { app } from "./config"
 
+
 const db = getFirestore(app) 
 
 export const getProducts = async () => {
@@ -49,9 +50,9 @@ if (docSnap.exists()) {
 export const createOrder = async (order) => {
   try {
     const docRef = await addDoc(collection(db, "orders"), order)
-    console.log("Document written with ID: ", docRef.id)
+      console.log("Tu número de pedido es ", docRef.id)
   } catch (e) {
-    console.error("Error adding document: ", e)
+      console.log("Error adding document: ", e)
   }
 }
 
